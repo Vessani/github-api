@@ -10,7 +10,7 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   return (
-    <div className="w-96 h-[777px] flex flex-col items-center bg-slate-50 md:w-[768px] md:h-[1024px]">
+    <div className="w-96 h-[777px] flex flex-col items-center bg-slate-50 md:w-[768px] md:h-[1024px] dark:bg-slate-900">
       <HeaderTheme />
       <SearchHub onSearch={setUserData} error={error} setError={setError} />
       {userData && !error && <ResultHub user={userData} />}

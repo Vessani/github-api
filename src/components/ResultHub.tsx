@@ -29,12 +29,12 @@ export function ResultHub({user}:Props) {
     {
       icon: "/assets/icon-location.svg",
       alt: "Location",
-      value: user.location ? ` @${user.location}` : "Not Available",
+      value: user.location ? ` ${user.location}` : "Not Available",
     },
     {
       icon: "/assets/icon-website.svg",
       alt: "Website",
-      value: user.blog ? `@${user.blog}` : "Not Available"
+      value: user.blog ? `${user.blog}` : "Not Available"
     },
     {
       icon: "/assets/icon-twitter.svg",
@@ -44,13 +44,13 @@ export function ResultHub({user}:Props) {
     {
       icon: "/assets/icon-company.svg",
       alt: "Company",
-      value: user.company ? `@${user.company}` : "Not Available"
+      value: user.company ? `${user.company}` : "Not Available"
     },
     
   ];
 
   return (
-    <div className="w-80 h-[517px] mt-4 bg-white rounded-2xl shadow-[0px_16px_30px_-10px_rgba(70,96,187,0.20)] flex flex-col md:w-[573px] md:h-[481px]">
+    <div className="w-80 h-[517px] mt-4 dark:bg-slate-800 bg-white rounded-2xl shadow-[0px_16px_30px_-10px_rgba(70,96,187,0.20)] flex flex-col md:w-[573px] md:h-[481px]">
       {/*FIXME: HEADER */}
       <div className="flex ml-6 mt-8 mr-[70px] gap-[19px] md: w-80 md:h-28">
         <div>
@@ -63,23 +63,23 @@ export function ResultHub({user}:Props) {
           />
         </div>
         <div className="flex flex-col justify-around">
-          <h1 className="text-slate-800 text-base font-bold">{user.name}</h1>
+          <h1 className="text-slate-800 dark:text-white text-base  font-bold">{user.name}</h1>
           <p className="text-blue-600 text-xs font-normal">@{user.login}</p>
-          <p className="text-slate-500 text-xs font-normal">{user.created_at}</p>
+          <p className="text-slate-500 dark:text-white text-xs font-normal">{user.created_at}</p>
         </div>
       </div>
       {/*FIXME: BIO */}
       <div>
-        <h2 className="text-slate-500 ml-6 mr-6 text-xs font-normal leading-normal text-start mt-[33px] h-[75px] md:w-[493px] md:ml-10 md:mr-10 md:mt-[38px]">
+        <h2 className="text-slate-500  dark:text-white ml-6 mr-6 text-xs font-normal leading-normal text-start mt-[33px] h-[75px] md:w-[493px] md:ml-10 md:mr-10 md:mt-[38px]">
           {user.bio}
         </h2>
       </div>
       {/*FIXME: REPERTORIO */}
-      <div className=" w-72 h-20 bg-slate-50 rounded-[10px] flex justify-around text-center mt-[23px] ml-[15px] mr-3.5 md:w-[493px] md:h-20">
+      <div className=" w-72 h-20 bg-slate-50 dark:bg-slate-900 rounded-[10px] flex justify-around items-center text-center mt-[23px] ml-[15px] mr-3.5 md:w-[493px] md:h-20">
         {stats.map((stat) => (
           <div key={stat.label}>
-            <p className="text-slate-500 text-xs font-normal">{stat.label}</p>
-            <p className=" text-start text-slate-800 text-base font-bold">{stat.value}</p>
+            <p className="text-slate-500 dark:text-white text-xs font-normal">{stat.label}</p>
+            <p className=" text-start text-slate-800 dark:text-white text-base font-bold">{stat.value}</p>
           </div>
         ))}
       </div>
@@ -88,7 +88,7 @@ export function ResultHub({user}:Props) {
         {infos.map((info) => (
           <div
             key={info.alt}
-            className=" flex items-center text-slate-500 text-xs font-normal"
+            className=" flex dark:text-white items-center text-slate-500 text-xs font-normal"
           >
             <Image src={info.icon} alt={info.alt} height={20} width={20}/>
             <p className="ml-[19.25px]">{info.value}</p>
