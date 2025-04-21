@@ -56,23 +56,23 @@ export function ResultHub({user}:Props) {
         <div>
           <Image
             src={user.avatar_url}
-            alt={user.name} 
+            alt={user.name || "Not Available"} 
             width={117}
             height={117}
             className="object-contain rounded-full"
           />
         </div>
         <div className="flex flex-col justify-around">
-          <p className="text-slate-800 text-base font-bold">{user.name}</p>
+          <h1 className="text-slate-800 text-base font-bold">{user.name}</h1>
           <p className="text-blue-600 text-xs font-normal">@{user.login}</p>
           <p className="text-slate-500 text-xs font-normal">{user.created_at}</p>
         </div>
       </div>
       {/*FIXME: BIO */}
       <div>
-        <p className="text-slate-500 ml-6 mr-6 text-xs font-normal leading-normal text-start mt-[33px] h-[75px] md:w-[493px] md:ml-10 md:mr-10 md:mt-[38px]">
+        <h2 className="text-slate-500 ml-6 mr-6 text-xs font-normal leading-normal text-start mt-[33px] h-[75px] md:w-[493px] md:ml-10 md:mr-10 md:mt-[38px]">
           {user.bio}
-        </p>
+        </h2>
       </div>
       {/*FIXME: REPERTORIO */}
       <div className=" w-72 h-20 bg-slate-50 rounded-[10px] flex justify-around text-center mt-[23px] ml-[15px] mr-3.5 md:w-[493px] md:h-20">
