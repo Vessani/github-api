@@ -38,10 +38,12 @@ Este projeto foi desenvolvido com foco em praticar **Next.js**, **React**, **Tai
    git clone https://github.com/Vessani/github-api.git
    cd github-api
 2. Instale as dependências:
+    ```bash
     npm install
     # ou
     yarn install    
 3. Rode o servidor de desenvolvimento:    
+    ```bash
     npm run dev
     # ou
     yarn dev
