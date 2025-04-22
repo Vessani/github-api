@@ -48,7 +48,7 @@ Este projeto foi desenvolvido com foco em praticar **Next.js**, **React**, **Tai
     # ou
     yarn dev
 
-   🧪 Melhorias Futuras
+🧪 Melhorias Futuras
  Corrigir persistência do tema escuro
 
  Adicionar carregamento enquanto busca usuário
